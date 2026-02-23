@@ -316,7 +316,7 @@ app.get('/stanford-pathway', (c) => {
     return c.html(Layout(StanfordPathwayPage(), 'Pathway to Stanford', 'stanford-pathway'))
 })
 
-const port = Number(process.env.PORT) || 4040
+const port = Number(process.env.PORT) || 4500
 console.log(`Server is running on port ${port}`)
 
 serve({
