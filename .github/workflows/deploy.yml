@@ -34,6 +34,7 @@ jobs:
           # Upload the built static files
           local-dir: ./dist/
           server-dir: ./domains/lightskyblue-termite-630978.hostingersite.com/public_html/
+          state-name: .ftp-deploy-static-sync-state.json
           exclude: |
             **/.git*
             **/.git*/**
