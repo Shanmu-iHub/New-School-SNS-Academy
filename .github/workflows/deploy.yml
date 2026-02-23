@@ -33,7 +33,7 @@ jobs:
           password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
           # Upload the built 'dist' folder and package.json
           local-dir: ./
-          server-dir: ./
+          server-dir: ./domains/lightskyblue-termite-630978.hostingersite.com/public_html/
           exclude: |
             **/.git*
             **/.git*/**
