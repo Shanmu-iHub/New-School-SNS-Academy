@@ -22,6 +22,8 @@ jobs:
         run: |
           npm install
           npm run build
+          ls -R dist # Debug: List files to ensure they exist before upload
+
 
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
@@ -31,7 +33,7 @@ jobs:
           password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
           # Upload the built 'dist' folder and package.json
           local-dir: ./
-          server-dir: ./public_html/
+          server-dir: ./
           exclude: |
             **/.git*
             **/.git*/**
