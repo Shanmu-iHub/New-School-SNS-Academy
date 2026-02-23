@@ -9,6 +9,7 @@
     "git:commit": "git add . && git commit -m"
   },
   "dependencies": {
+    "@hono/node-server": "^1.19.9",
     "hono": "^4.11.4"
   },
   "devDependencies": {

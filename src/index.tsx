@@ -1,4 +1,5 @@
 import { Hono } from 'hono'
+import { serve } from '@hono/node-server'
 import { cors } from 'hono/cors'
 import { Layout, PageHeader } from './components/layout'
 import { HomePage } from './pages/home'
@@ -313,6 +314,14 @@ app.get('/success-stories', (c) => {
 // Stanford Pathway Page
 app.get('/stanford-pathway', (c) => {
     return c.html(Layout(StanfordPathwayPage(), 'Pathway to Stanford', 'stanford-pathway'))
+})
+
+const port = 3000
+console.log(`Server is running on port ${port}`)
+
+serve({
+    fetch: app.fetch,
+    port
 })
 
 export default app
